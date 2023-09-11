@@ -1,0 +1,278 @@
+<!DOCTYPE html> 
+ <html lang="en"> 
+  
+ <head> 
+     <meta charset="UTF-8"> 
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+     <meta name="viewport" content="width=device-width, initial-scale=0.9"> 
+     <title>Certification</title> 
+     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
+  
+     <link rel="preconnect" href="https://fonts.googleapis.com"> 
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;500&display=swap" rel="stylesheet"> 
+  
+     <link rel="stylesheet" href="./CSS/style.css"> 
+ </head> 
+  
+ <body> 
+  
+     <!-- Candidate Detail --> 
+     <form id="form"> 
+         <h1>Certificate</h1> 
+         <div class="course"> 
+             <span>Course:</span> 
+             <select name="course" id="course" class="course" required> 
+                 <option value=""></option> 
+                 <option value="Web Development">Web Development</option> 
+                 <option value="Android Development">Android Development</option> 
+                 <option value="Competitive Programming">Competitive Programming</option> 
+             </select> 
+         </div> 
+  
+         <div class="name"> 
+             <span>Name: </span> 
+             <input type="text" placeholder="name" required id="name"> 
+         </div> 
+  
+         <div class="date"> 
+             Start: <input type="date" name="" id="start-date" required> 
+             End: <input type="date" name="" id="end-date" required> 
+         </div> 
+         <div> 
+             <button>Submit</button> 
+             <button type="reset">Reset</button> 
+         </div> 
+     </form> 
+  
+  
+     <!-- Certificate --> 
+  
+     <main id="main"> 
+         <div class="container"> 
+  
+             <div class="certificate-header"> 
+                 <h1>Emulation<span></h1> 
+                 <h4 id="date_conatiner">Internship Conducted Between (<span id="startDate"></span> To <span 
+                         id="endDate"></span>)</h4> 
+             </div> 
+  
+             <div class="certificate-main" id="form"> 
+                 <p>This certificate is awarded to</p> 
+                 <h4 class="candidate-name" id="candidate_name"></h4> 
+                 <p>in appreciation of your successful completion of intership of the position of<b><span 
+                             class="candidate_course" id="subject"></span></b>at NBC SOLUTIONS .</p> 
+  
+                 <p class="sign">director sign</p> 
+                 <div class="hr"></div> 
+                 <h6>Director Name</h6> 
+                 <h5>Executive Director, NBC SOLUTIONS</h5> 
+  
+                 <img class="full_logo" src="/storage/emulated/0/Download/images (1) (2).png" alt="Emulation"> 
+             </div> 
+         </div> 
+  
+         <button id="btn" class="button">BE INNOVATIVE </button> 
+     </main> 
+  
+  
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script> 
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.js"></script> 
+     <script src="./Javascript/certificate.js"></script> 
+ </body> 
+  
+ </html><style type="text/css">* { 
+ margin: 0; 
+ padding: 0; 
+ font-family: 'Noto Sans Mono', monospace; 
+ } 
+ 
+ body { 
+ background-color: whitesmoke; 
+ display: flex; 
+ flex-direction: row; 
+ justify-content: space-around; 
+ align-items: center; 
+ padding: 40px; 
+ margin-bottom: 30px; 
+ } 
+ 
+ /* form Style */ 
+ 
+ form { 
+ margin-top: 30px; 
+ display: flex; 
+ flex-direction: column; 
+ background-color: white; 
+ padding: 15px; 
+ width: 400px; 
+ border: 2px solid rgb(0, 145, 255); 
+ border-radius: 10px; 
+ gap: 10px; 
+ box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.3); 
+ } 
+ 
+ .course, 
+ .name { 
+ border-radius: 5px; 
+ } 
+ 
+ input, 
+ select { 
+ border: 1px solid rgb(0, 145, 255); 
+ border-radius: 5px; 
+ padding: 3px; 
+ } 
+ 
+ button { 
+ height: 25px; 
+ width: 80px; 
+ border-radius: 5px; 
+ border: 1px solid rgb(0, 145, 255); 
+ } 
+ 
+ main { 
+ text-align: center; 
+ margin-top: 60px; 
+ background-color: white; 
+ width: 800px; 
+ height: auto; 
+ border: 10px solid rgb(0, 145, 255); 
+ box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.3); 
+ padding: 1rem; 
+ position: relative; 
+ display: flex; 
+ align-items: center; 
+ flex-direction: column; 
+ } 
+ 
+ .container { 
+ background-color: whitesmoke; 
+ width: 100%; 
+ } 
+ 
+ .certificate-header { 
+ height: 120px; 
+ min-width: 750px; 
+ background-color: skyblue; 
+ display: flex; 
+ flex-direction: column; 
+ align-items: center; 
+ justify-content: center; 
+ } 
+ 
+ .certificate-header h1 { 
+ font-size: 2.5rem; 
+ } 
+ 
+ 
+ .certificate-main { 
+ min-width: 750px; 
+ display: flex; 
+ flex-direction: column; 
+ justify-content: center; 
+ align-items: center; 
+ line-height: 30px; 
+ font-size: 1.3rem; 
+ height: 460px; 
+ } 
+ 
+ .certificate-header img { 
+ position: relative; 
+ top: 15px; 
+ width: 100px; 
+ } 
+ 
+ 
+ .certificate-main img { 
+ height: 100px; 
+ } 
+ 
+ .certificate-main { 
+ line-height: 30px; 
+ } 
+ 
+ .sign { 
+ margin-top: 20px; 
+ font-size: 2rem; 
+ font-family: 'Caveat', cursive; 
+ } 
+ 
+ .hr { 
+ width: 300px; 
+ height: 2px; 
+ background-color: black; 
+ } 
+ 
+ .candidate-name { 
+ margin: 15px; 
+ font-size: 2rem; 
+ } 
+ 
+ .candidate_course { 
+ margin: 5px; 
+ } 
+ 
+ h6 { 
+ margin-top: 10px; 
+ } 
+ 
+ .full_logo { 
+ margin-top: 20px; 
+ position: relative; 
+ left: 10px; 
+ } 
+ 
+ .button { 
+ position: absolute; 
+ margin-top: 40px; 
+ width: 150px; 
+ height: 40px; 
+ border-radius: 10px; 
+ transition: all ease 0.5s; 
+ border: 2px solid rgb(0, 145, 255); 
+ left: 42%; 
+ top: 100%; 
+ } 
+ 
+ .button:hover { 
+ background-color: black; 
+ color: white; 
+ } 
+ 
+ @media screen and (max-width: 1348px) { 
+ 
+ body { 
+ flex-direction: column; 
+ } 
+ }</style><script type="text/javascript">var na = ''; 
+ var form = document.getElementById("form"); 
+ form.addEventListener('submit', function (event) { 
+ event.preventDefault(); 
+ 
+ var name = document.getElementById("name").value; 
+ var course = document.getElementById("course").value; 
+ var start_date = document.getElementById('start-date').value; 
+ var end_date = document.getElementById('end-date').value; 
+ 
+ 
+ document.getElementById('candidate_name').innerText = name; 
+ document.getElementById('subject').innerText = course; 
+ 
+ 
+ document.getElementById('startDate').innerText = start_date; 
+ document.getElementById('endDate').innerText = end_date; 
+ na = name.split(' ').join(''); 
+ }) 
+ 
+ /*
+ $(document).ready(function () { 
+ $('#btn').click(function () { 
+ domtoimage.toBlob(document.getElementById('main')).then(function (blob) { 
+ window.saveAs(blob, na + "-result.png"); 
+ }) 
+ }) 
+ })*/
+ 
+ </script>
